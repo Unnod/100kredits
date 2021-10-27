@@ -1,0 +1,214 @@
+html{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.container{
+    max-width: 1197px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.title{
+    font-size: 32px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 75px;
+    padding-top: 52px;
+    font-weight: 500;
+    letter-spacing: 8px;
+    padding-bottom: 7px;
+    span{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,50%);
+        font-size: 53px;
+        color: rgba(233, 233, 233,.3);
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 0px;
+        width: 100%;
+    }
+}
+
+button.application{
+    background-color: #89b23d;
+    border: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fefefe;
+    padding: 25px 10px;
+    max-width: 395px;
+    width: 100%;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    div{
+        display: inline-block;
+    }
+    span{
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url(../images/checked_light-green.svg);
+            width: 25px;
+            height: 25px;
+        }
+    }
+    position: relative;
+    overflow: hidden;
+    &::after{
+        content: '';
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background-color: #fff;
+        width: 500px;
+        height: 500px;
+        opacity: 0.2;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -ms-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        margin: -250px 0px 0px -250px;
+        -webkit-animation: button 3s infinite linear;
+        -moz-animation: button 3s infinite linear;
+        -o-animation: button 3s infinite linear;
+        animation: button 3s infinite linear;
+    }
+    transition: background-color .3s;
+    &:hover{
+        background-color: #3a90c9;
+        &::after{
+            display: none;
+        }
+    }
+}
+
+.check-blue{
+    position: relative;
+    padding-left: 40px;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url(../images/checked_blue.svg);
+        width: 23px;
+        height: 23px;
+    }
+}
+
+.blue-underline{
+    position: relative;
+    z-index: 1;
+    &::after{
+        content: '';
+        background-color: rgba(184, 229, 235, .8);
+        box-shadow: 0 0 8px 3px rgba(184, 229, 235, .8);
+        position: absolute;
+        width: 105%;
+        bottom: 0;
+        height: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        opacity: .75;
+        border-radius: 10px;
+    }
+}
+
+.green-underline{
+    position: relative;
+    z-index: 1;
+    &::after{
+        content: '';
+        background-color: rgba(211, 226, 172, .8);
+        box-shadow: 0 0 8px 6px rgba(211, 226, 172, .8);
+        position: absolute;
+        width: 105%;
+        bottom: 0;
+        height: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        opacity: .75;
+        border-radius: 10px;
+    }
+}
+
+.slick-arrow{
+    width: 40px;
+    height: 40px;
+    background-color: #2599b2;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    top: 50%;
+    position: absolute;
+    z-index: 1;
+    outline: none;
+    transition: all .3s;
+    border: 2px solid transparent;
+    &:hover{
+        background-color: #fff;
+        border-color:#2599b2;
+        color: #2599b2;
+    }
+}
+.prev-arrow{
+    transform: rotateZ(90deg) translate(-50%,50%);
+    left: 0;
+}
+.next-arrow{
+    transform: rotateZ(-90deg) translate(50%,50%);
+    right: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
